@@ -1,0 +1,10 @@
+<div class="container py-5">
+    <div >
+      <h3>Which movie do you want to add to your <%= @list.name %> list?</h3>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment, placeholder: 'Add a comment about the movie' %>
+        <%= f.association :movie, prompt: 'Choose a movie' %>
+        <%= f.submit class: 'btn btn-flat' %>
+      <% end %>
+  </div>
+</div>
