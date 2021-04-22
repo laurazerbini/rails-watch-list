@@ -17,3 +17,6 @@
       <%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %>
   <% end %>
 </div>
+
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
